@@ -8,47 +8,47 @@ export default function Collections({ navigation }) {
             <Grid>
                 <Text style={styles.text2}>Budapest Collection</Text>
                 <Row style={styles.RowContainer}>
-                    <Col size={50} style={styles.Cell}>
-                        <Text style={styles.text}>1</Text>
-                    </Col>
-                    <Col size={50} style={styles.Cell} >
-                        <Text style={styles.text}>2</Text>
-                    </Col>
+                <Col size={50} style={styles.Cell}>
+                    <Text style={styles.text}>1</Text>
+                </Col>
+                <Col size={50} style={styles.Cell} >
+                    <Text style={styles.text}>2</Text>
+                </Col>
                 </Row>
 
                 <Text style={styles.text2}>Street Art Collection</Text>
                 <Row style={styles.RowContainer}>
-                    <Col size={50} style={styles.Cell}>
-                        <Text style={styles.text}>1</Text>
-                    </Col>
-                    <Col size={50} style={styles.Cell} >
-                        <Text style={styles.text}>2</Text>
-                    </Col>
+                <Col size={50} style={styles.Cell}>
+                    <Text style={styles.text}>1</Text>
+                </Col>
+                <Col size={50} style={styles.Cell} >
+                    <Text style={styles.text}>2</Text>
+                </Col>
                 </Row>
 
                 <Text style={styles.text2}>TIER X GREENPIECE</Text>
                 <Row style={styles.RowContainer}>
-                    <Col size={50} style={styles.Cell}>
-                        <Text style={styles.text}>1</Text>
-                    </Col>
-                    <Col size={50} style={styles.Cell} >
-                        <Text style={styles.text}>2</Text>
-                    </Col>
+                <Col size={50} style={styles.Cell}>
+                    <Text style={styles.text}>1</Text>
+                </Col>
+                <Col size={50} style={styles.Cell} >
+                    <Text style={styles.text}>2</Text>
+                </Col>
                 </Row>
 
                 <Text style={styles.text2}>MEME Collection</Text>
                 <Row style={styles.RowContainer}>
-                    <Col size={50} style={styles.Cell}>
-                        <Text style={styles.text}>1</Text>
-                    </Col>
-                    <Col size={50} style={styles.Cell} >
-                        <Text style={styles.text}>2</Text>
-                    </Col>
+                <Col size={50} style={styles.Cell}>
+                    <Text style={styles.text}>1</Text>
+                </Col>
+                <Col size={50} style={styles.Cell} >
+                    <Text style={styles.text}>2</Text>
+                </Col>
                 </Row>
             </Grid>
         </View>
     );
-}
+  }
 
 const gap = 12;
 
@@ -59,28 +59,29 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         height: '90%',
-    },
-    Cell: {
+      },
+      Cell: {
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#C4C4C4',
         height: 130,
         borderRadius: 10,
         marginHorizontal: gap / 2,
-    },
-    text: {
+      },
+      text: {
         fontSize: 26,
         fontWeight: 'bold',
         color: 'white'
-    },
-    text2: {
+      },
+      text2: {
         fontSize: 18,
         fontWeight: 'bold',
         color: 'black',
         marginLeft: 9
-    },
-    RowContainer: {
+      },
+      RowContainer: {
         paddingHorizontal: (gap / -2),
         width: '100%',
-    },
+      },
 });
+>>>>>>> 69eddd244575f141b3613fb9fe96f7f8e309f6c6

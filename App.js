@@ -15,20 +15,20 @@ import BottomDrawer from "./components/BottomDrawer";
 const Drawer = createDrawerNavigator();
 
 export default function App() {
-    return (
-        <PaperProvider>
-            <NavigationContainer>
-                <Drawer.Navigator initialRouteName="Home">
-                    <Drawer.Screen name="Home" component={Home} />
-                    <Drawer.Screen name="Collections" component={Collections} />
-                    <Drawer.Screen name="Map" component={Map} />
-                </Drawer.Navigator>
-            </NavigationContainer>
-            <BottomDrawer onDrawerStateChange={() => console.log("Yo")}>
-                <Text>ADSFASDFA</Text>
-            </BottomDrawer>
-        </PaperProvider>
-    );
+  return (
+    <PaperProvider>
+      <NavigationContainer>
+        <Drawer.Navigator initialRouteName="Home">
+          <Drawer.Screen name="Home" component={Home} />
+          <Drawer.Screen name="Collections" component={Collections} />
+          <Drawer.Screen name="Map" component={Map} />
+        </Drawer.Navigator>
+      </NavigationContainer>
+      <BottomDrawer onDrawerStateChange={() => console.log("Yo")}>
+        <Text>ADSFASDFA</Text>
+      </BottomDrawer>
+    </PaperProvider>
+  );
 }
 
 const styles = StyleSheet.create({});

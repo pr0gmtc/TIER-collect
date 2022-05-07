@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from 'react';
 import MapView, {Marker} from 'react-native-maps';
 import {StyleSheet, Text, View, Dimensions, Image} from 'react-native';
