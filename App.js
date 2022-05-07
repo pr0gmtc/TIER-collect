@@ -1,24 +1,18 @@
 import * as React from 'react';
 import MapView from 'react-native-maps';
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
+import { Provider as PaperProvider } from 'react-native-paper';
+import Map from './screens/Map'
+import SideDrawer from './components/SideDrawer'
 
 export default function App() {
   return (
-      <View style={styles.container}>
-        <MapView style={styles.map} />
-      </View>
+    <PaperProvider>
+      <Map />
+      <SideDrawer />
+    </PaperProvider>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  map: {
-    width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height,
-  },
 });
