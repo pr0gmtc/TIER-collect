@@ -11,7 +11,7 @@ import styled from "styled-components/native";
 
 const { height } = Dimensions.get("window");
 const DrawerState = {
-  Open: height - 230,
+  Open: height - 300,
   Peek: 230,
   Closed: 0,
 };

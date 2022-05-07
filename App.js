@@ -1,7 +1,7 @@
 import * as React from "react";
 import "react-native-gesture-handler";
 import MapView from "react-native-maps";
-import { StyleSheet, Text, View, Dimensions } from "react-native";
+import { StyleSheet, Text, View, Dimensions, Image } from "react-native";
 import { Provider as PaperProvider } from "react-native-paper";
 import Map from "./screens/Map";
 import SideDrawer from "./components/SideDrawer";
@@ -27,8 +27,13 @@ export default function App() {
       <BottomDrawer onDrawerStateChange={() => console.log("Yo")}>
         <Text style={styles.textBig}>Budapest Collection</Text>
         <Text style={styles.textSmall}>5 min free ride</Text>
-        <Text style={styles.textMedium}>Széchenyi Chain Bridge</Text>
-        <Text style={styles.textMedium}>Collected</Text>
+        <Image
+          style={styles.image}
+          resizeMode={"contain"}
+          source={require("./assets/Asset_2.png")}
+        />
+        <Text style={styles.textMedium2}>Széchenyi Chain Bridge</Text>
+        <Text style={styles.textMedium2}>Collected</Text>
         <Text style={styles.textMedium}>1/5</Text>
       </BottomDrawer>
     </PaperProvider>
@@ -37,6 +42,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   textBig: {
+    marginTop: 40,
     fontSize: 26,
     fontWeight: "bold",
   },
@@ -47,5 +53,14 @@ const styles = StyleSheet.create({
   textMedium: {
     fontSize: 20,
     fontWeight: "400",
+  },
+  textMedium2: {
+    fontSize: 20,
+    fontWeight: "400",
+    marginTop: 30,
+  },
+  image: {
+    marginTop: 70,
+    height: 200,
   },
 });
