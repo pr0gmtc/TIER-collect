@@ -49,11 +49,14 @@ const BottomDrawer = ({ children, onDrawerStateChange }) => {
     <Animated.View
       style={[
         {
-          width: "100%",
+          width: "90%",
           height: height,
           backgroundColor: "#fff",
           borderRadius: 25,
           position: "absolute",
+          margin: "5%",
+          display: "flex",
+          alignItems: "center",
           bottom: -height + 30,
           transform: [{ translateY: y }],
         },
@@ -68,8 +71,9 @@ const BottomDrawer = ({ children, onDrawerStateChange }) => {
 
 export const HorizontalLine = styled(View)`
   margin: 25px 0px 15px 0px;
-  height: 1px;
-  width: 100%;
+  height: 3px;
+  width: 30%;
+  border-radius: 10px;
   background-color: #d3d3d3;
 `;
 

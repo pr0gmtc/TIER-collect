@@ -25,10 +25,27 @@ export default function App() {
         </Drawer.Navigator>
       </NavigationContainer>
       <BottomDrawer onDrawerStateChange={() => console.log("Yo")}>
-        <Text>ADSFASDFA</Text>
+        <Text style={styles.textBig}>Budapest Collection</Text>
+        <Text style={styles.textSmall}>5 min free ride</Text>
+        <Text style={styles.textMedium}>Széchenyi Chain Bridge</Text>
+        <Text style={styles.textMedium}>Collected</Text>
+        <Text style={styles.textMedium}>1/5</Text>
       </BottomDrawer>
     </PaperProvider>
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  textBig: {
+    fontSize: 26,
+    fontWeight: "bold",
+  },
+  textSmall: {
+    fontSize: 20,
+    fontWeight: "200",
+  },
+  textMedium: {
+    fontSize: 20,
+    fontWeight: "400",
+  },
+});
