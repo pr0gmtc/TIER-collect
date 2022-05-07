@@ -1,5 +1,6 @@
 {
   "expo": {
+    "scheme": "HackathonCommit",
     "name": "TierCollect",
     "slug": "TierCollect",
     "version": "1.0.0",

@@ -11,13 +11,20 @@ import { Button } from "react-native-paper";
 import Home from "./screens/Home";
 import Collections from "./screens/Collections";
 import BottomDrawer from "./components/BottomDrawer";
+import * as Linking from "expo-linking";
+
+const prefix = Linking.createURL("/");
 
 const Drawer = createDrawerNavigator();
 
 export default function App() {
+  const linking = {
+    prefixes: [prefix],
+  };
+
   return (
     <PaperProvider>
-      <NavigationContainer>
+      <NavigationContainer linking={linking}>
         <Drawer.Navigator initialRouteName="Home">
           <Drawer.Screen name="Home" component={Home} />
           <Drawer.Screen name="Collections" component={Collections} />
