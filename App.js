@@ -31,18 +31,7 @@ export default function App() {
           <Drawer.Screen name="Map" component={Map} />
         </Drawer.Navigator>
       </NavigationContainer>
-      <BottomDrawer onDrawerStateChange={() => console.log("Yo")}>
-        <Text style={styles.textBig}>Budapest Collection</Text>
-        <Text style={styles.textSmall}>5 min free ride</Text>
-        <Image
-          style={styles.image}
-          resizeMode={"contain"}
-          source={require("./assets/Asset_2.png")}
-        />
-        <Text style={styles.textMedium2}>Széchenyi Chain Bridge</Text>
-        <Text style={styles.textMedium2}>Collected</Text>
-        <Text style={styles.textMedium}>1/5</Text>
-      </BottomDrawer>
+
     </PaperProvider>
   );
 }

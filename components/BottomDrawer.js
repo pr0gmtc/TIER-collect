@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, {useImperativeHandle, useRef} from "react";
 import {
   Animated,
   View,
@@ -16,12 +16,18 @@ const DrawerState = {
   Closed: 0,
 };
 
-const BottomDrawer = ({ children, onDrawerStateChange }) => {
+const BottomDrawer = React.forwardRef(({ children, onDrawerStateChange }, ref) => {
   const { height } = Dimensions.get("window");
   const y = React.useRef(new Animated.Value(DrawerState.Closed)).current;
   const state = React.useRef(new Animated.Value(DrawerState.Closed)).current;
   const margin = 0.05 * height;
   const movementValue = (moveY) => height - moveY;
+
+  useImperativeHandle(ref, (props, ref) => ({
+    onStickerPress() {
+      onStickerPress()
+    }
+  }))
 
   const onPanResponderMove = (_, { moveY }) => {
     const val = movementValue(moveY);
@@ -45,6 +51,13 @@ const BottomDrawer = ({ children, onDrawerStateChange }) => {
     })
   ).current;
 
+  const onStickerPress = () => {
+    const valueToMove = movementValue(300);
+    const nextState = getNextState(DrawerState.Closed, 500, 0);
+    state.setValue(nextState);
+    animateMove(y, nextState, onDrawerStateChange(nextState));
+  };
+
   return (
     <Animated.View
       style={[
@@ -67,7 +80,7 @@ const BottomDrawer = ({ children, onDrawerStateChange }) => {
       {children}
     </Animated.View>
   );
-};
+});
 
 export const HorizontalLine = styled(View)`
   margin: 25px 0px 15px 0px;
