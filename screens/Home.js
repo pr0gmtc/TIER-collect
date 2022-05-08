@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { View, StyleSheet, Text, Image } from "react-native";
 import { Button } from "react-native-paper";
 import { Col, Row, Grid } from "react-native-easy-grid";
