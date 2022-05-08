@@ -25,7 +25,6 @@ export default function Home({ navigation }) {
                         />
                     </Col>
                 </Row>
-
                 <Text style={styles.text2}>Street Art Collection</Text>
                 <Row style={styles.RowContainer}>
                     <Col size={50} style={styles.Cell}>
