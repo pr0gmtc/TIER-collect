@@ -2,6 +2,7 @@ import * as React from "react";
 import MapView from "react-native-maps";
 import { StyleSheet, Text, View, Dimensions } from "react-native";
 import { Button, shadow } from "react-native-paper";
+import * as Linking from "expo-linking";
 
 export default function Map() {
   return (
@@ -26,7 +27,7 @@ export default function Map() {
           mode="text"
           // dark={false}
           color="#111A4D"
-          onPress={() => console.log("Pressed")}
+          onPress={() => Linking.openURL("dslnfklsdjf:")}
           style={{
             width: 240,
             padding: 2,
