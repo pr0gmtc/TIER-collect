@@ -114,3 +114,4 @@ export const getNextState = (currentState, val, margin) => {
 };
 
 export default BottomDrawer;
+>>>>>>> 69eddd244575f141b3613fb9fe96f7f8e309f6c6
